@@ -12,7 +12,7 @@ def get_cats_info(path):
 
                 cat_data = line.strip().split(',')
 
-                info_or_cat = { "id": cat_data[0], "name": cat_data[1], "age": int(cat_data[2]) }
+                info_or_cat = { "id": cat_data[0], "name": cat_data[1], "age": cat_data[2] }
                   
                 info_or_cats.append(info_or_cat)
 

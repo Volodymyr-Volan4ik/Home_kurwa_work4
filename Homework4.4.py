@@ -37,10 +37,11 @@ def show_phone(args, contacts):
 @input_error
 def show_all(contacts):
     if contacts:
-        for name, phone in contacts.items():
-            print(f"{name}: {phone}")
+        contacts_list = [f"{name}: {phone}" for name, phone in contacts.items()]
+        return '\n'.join(contacts_list)
     else:
-        print("No contacts saved.")
+        return "No contacts saved."
+
 
 
 def main():
@@ -67,7 +68,7 @@ def main():
             print(show_phone(args, contacts))
 
         elif command == "all":
-            show_all(contacts)
+            print(show_all(contacts))
 
         else:
             print("Invalid command.")
